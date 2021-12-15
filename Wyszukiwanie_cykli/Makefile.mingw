@@ -1,0 +1,19 @@
+kompilator=g++
+sciezka=Wyszukiwanie_cykli
+
+
+wyszukiwanie_cykli : main.o pozostale.o wierzcholki.o cykle.o
+	$(kompilator) main.o pozostale.o wierzcholki.o cykle.o -o wyszukiwanie_cykli
+
+main.o : main.cpp
+	$(kompilator) -c main.cpp -o main.o
+
+pozostale.o : pozostale.cpp
+	$(kompilator) -c pozostale.cpp -o pozostale.o
+
+wierzcholki.o : wierzcholki.cpp
+	$(kompilator) -c wierzcholki.cpp -o wierzcholki.o
+
+cykle.o : cykle.cpp
+	$(kompilator) -c cykle.cpp -o cykle.o
+
